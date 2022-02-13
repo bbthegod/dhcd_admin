@@ -8,8 +8,7 @@ import { useHistory } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-import LockOpenIcon from '@mui/icons-material/LockOpenOutlined';
-import { Tabs, Tab, Divider, Button } from '@mui/material';
+import { Divider, Button } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 
@@ -18,7 +17,6 @@ import ContentDetail from 'app/components/ContentDetail';
 import FileDialog from 'app/components/FileDialog';
 import Loading from 'app/components/Loading';
 import Header from 'app/components/Header';
-import Play from 'app/components/Play';
 
 import { selectFileDetail } from './slice/selectors';
 import classes from './styles.module.css';

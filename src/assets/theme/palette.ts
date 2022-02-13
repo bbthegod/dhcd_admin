@@ -2,7 +2,7 @@ import { colors } from '@mui/material';
 
 const white = '#FFFFFF';
 const black = '#000000';
-const whiteText = '#F5F5F5';
+// const whiteText = '#F5F5F5';
 const darkText = '#000000';
 const customPurple = '#2196F3';
 const customGreen = '#2196F3';

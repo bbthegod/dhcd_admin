@@ -3,8 +3,6 @@
  * Play
  *
  */
-import moment from 'moment/moment';
-
 import {
   Card,
   CardContent,
