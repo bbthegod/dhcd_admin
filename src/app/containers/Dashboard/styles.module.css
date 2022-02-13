@@ -1,0 +1,9 @@
+.root {
+  height: 100%;
+  padding-top: 64px;
+}
+.content {
+  margin-left: 240px;
+  padding: 20px;
+  min-height: 100vh;
+}

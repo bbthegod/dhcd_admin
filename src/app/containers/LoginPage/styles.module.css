@@ -1,0 +1,36 @@
+.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+}
+.card {
+  width: 400px;
+  max-width: 100%;
+  overflow: unset;
+  display: flex;
+  position: relative;
+  border-radius: 15px !important;
+  padding: 28px 10px !important;
+}
+.cardContent {
+  width: 100% !important;
+}
+.text {
+  font-size: 25px !important;
+  text-align: center;
+  font-weight: 500 !important;
+  margin-bottom: 15px !important;
+}
+.inputWrapper {
+  width: 100%;
+  margin-bottom: 15px !important;
+}
+.input {
+  width: 100%;
+}
+.button {
+  margin-top: 16px;
+  width: 100%;
+}

@@ -1,0 +1,19 @@
+.root {
+  padding: 24px;
+}
+.tabs {
+  margin-top: 24px;
+  /* color: theme.palette.text.primary; */
+}
+.content {
+  margin-top: 24px;
+}
+.editButton {
+  color: #2196f3 !important;
+}
+.removeButton {
+  color: #f44336 !important;
+}
+.resetButton {
+  color: #4caf50 !important;
+}

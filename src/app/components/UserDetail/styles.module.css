@@ -1,0 +1,31 @@
+.scoreBox {
+  text-align: left;
+  margin: 10;
+  display: flex;
+  align-items: center;
+}
+.inforText {
+  color: #ff9800;
+}
+.header {
+  padding: 15px 0px;
+  margin-bottom: 0px;
+}
+.content {
+  padding: 20px;
+}
+.textarea {
+  margin: 20px 0px;
+}
+.textarea textarea {
+  max-width: 100% !important;
+  width: calc(100% - 5px) !important;
+  height: 200px !important;
+  color: #ffffff !important;
+  background-color: #1f1f1f;
+  font-family: 'Open Sans', sans-serif !important;
+  border-color: #ff9800 !important;
+}
+.colored input:valid + fieldset {
+  border-color: #ff9800;
+}

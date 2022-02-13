@@ -1,0 +1,18 @@
+.header {
+  padding: 15px 0px;
+  margin-bottom: 0px;
+}
+.content {
+  padding: 20px;
+  text-align: left;
+}
+.content h4 {
+  color: #ff9800;
+  margin-top: 20px;
+}
+.content h5 {
+  margin-top: 10px;
+}
+.input input:valid + fieldset {
+  border-color: #ff9800;
+}

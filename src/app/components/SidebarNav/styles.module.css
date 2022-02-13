@@ -1,0 +1,26 @@
+.root {
+  margin-bottom: 16px;
+}
+.item {
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-grow: 0 !important;
+}
+.button {
+  padding: 10px 8px;
+  justify-content: flex-start !important;
+  text-transform: none;
+  letter-spacing: 0;
+  width: 100%;
+  font-weight: 500;
+}
+.buttonActive {
+  color: #ff9800 !important;
+  padding: 10px 8px;
+  justify-content: flex-start !important;
+  text-transform: none;
+  letter-spacing: 0;
+  width: 100%;
+  font-weight: 500;
+}

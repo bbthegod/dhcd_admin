@@ -1,0 +1,32 @@
+.root {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  width: 700;
+  max-height: 100%;
+  overflow-y: auto;
+  max-width: 100%;
+}
+.content {
+  padding: 24px !important;
+}
+.container {
+  margin-top: 10px;
+}
+.actions {
+  justify-content: flex-end;
+  padding: 24px !important;
+  padding-top: 0px !important;
+}
+.closeButton {
+  color: #ffffff;
+}
+.saveButton {
+  color: #ffffff;
+  background-color: #4caf50;
+}
+.savebutton:hover {
+  background-color: #388e3c;
+}

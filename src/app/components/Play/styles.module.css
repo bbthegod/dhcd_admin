@@ -1,0 +1,31 @@
+.content {
+  padding: 0;
+}
+.inner {
+  min-width: 700px;
+}
+.nameCell {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  height: 42px;
+  width: 42px;
+  margin-right: 8px;
+}
+.actions {
+  padding: 8px;
+  justify-content: flex-end;
+}
+.info {
+  margin: 30px 0;
+}
+.item {
+  padding: 10px;
+  text-align: center;
+}
+.valueContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

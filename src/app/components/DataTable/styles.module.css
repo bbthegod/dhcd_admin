@@ -1,0 +1,28 @@
+.root {
+  margin-top: 8px;
+}
+.content {
+  padding: 0px 20px;
+}
+.inner {
+  min-width: 700;
+}
+.nameCell {
+  display: 'flex';
+  align-items: 'center';
+}
+.avatar {
+  height: 42;
+  width: 42;
+  margin-right: 8px;
+}
+.actions {
+  padding: 8px;
+  justify-content: 'flex-end';
+}
+.page {
+  margin: '10px 0';
+}
+.interviewContent {
+  white-space: pre-line;
+}

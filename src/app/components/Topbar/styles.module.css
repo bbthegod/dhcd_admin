@@ -1,0 +1,19 @@
+.root {
+  box-shadow: none !important;
+  height: 64px;
+}
+.logo {
+  height: 30px;
+}
+.logoWrapper {
+  border-radius: 5px;
+  padding: 5px;
+  height: 30px;
+}
+.flexGrow {
+  flex-grow: 1;
+}
+.signOutButton {
+  margin-left: 8px;
+  color: #FFFFFF !important;
+}
