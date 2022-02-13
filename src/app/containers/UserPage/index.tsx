@@ -17,8 +17,8 @@ import { actions } from './slice';
 
 interface Props {}
 
-const heading = ['Tên Người Dùng', 'Tên đầy đủ', 'Chức Vụ'];
-const value = ['username', 'fullname', 'role'];
+const heading = ['Tên Người Dùng', 'Tên đầy đủ', 'Chức Vụ', 'Điểm Danh'];
+const value = ['username', 'fullname', 'role', 'isCheckin'];
 
 export default function UserPage(props: Props) {
   const { users, count, loading } = useSelector(selectUserPage);

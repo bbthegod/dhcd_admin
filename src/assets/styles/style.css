@@ -26,3 +26,7 @@ select {
   font-family: inherit;
   font-size: inherit;
 }
+
+#top-container{
+  min-height: 100px !important;
+}

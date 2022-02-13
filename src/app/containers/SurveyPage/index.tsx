@@ -27,26 +27,26 @@ export default function SurveyPage(props: Props) {
   useEffect(() => {
     if (users) {
       let c1 = [
-        { label: 'a', count: 0 },
-        { label: 'b', count: 0 },
+        { label: 'A', count: 0 },
+        { label: 'B', count: 0 },
       ];
       let c2 = [
-        { label: 'a', count: 0 },
-        { label: 'b', count: 0 },
-        { label: 'c', count: 0 },
-        { label: 'd', count: 0 },
+        { label: 'A', count: 0 },
+        { label: 'B', count: 0 },
+        { label: 'C', count: 0 },
+        { label: 'D', count: 0 },
       ];
       let c3 = [
-        { label: 'a', count: 0 },
-        { label: 'b', count: 0 },
-        { label: 'c', count: 0 },
-        { label: 'd', count: 0 },
+        { label: 'A', count: 0 },
+        { label: 'B', count: 0 },
+        { label: 'C', count: 0 },
+        { label: 'D', count: 0 },
       ];
       let c4 = [
-        { label: 'a', count: 0 },
-        { label: 'b', count: 0 },
-        { label: 'c', count: 0 },
-        { label: 'd', count: 0 },
+        { label: 'A', count: 0 },
+        { label: 'B', count: 0 },
+        { label: 'C', count: 0 },
+        { label: 'D', count: 0 },
       ];
       users.forEach(user => {
         if (user.survey.length > 0) {
@@ -109,7 +109,7 @@ export default function SurveyPage(props: Props) {
         <Grid item xs={3}>
           {chart1 && (
             <Chart data={chart1}>
-              <Legend position="bottom" />
+              <Legend />
               <PieSeries valueField="count" argumentField="label" />
               <Title text="Đồng chí đã từng rơi vào tình trạng phải lục tìm hết đống hồ sơ, tài liệu nhưng vẫn không tìm thấy một công văn, một tờ trình đã từng thực hiện?" />
               <EventTracker />
@@ -120,7 +120,7 @@ export default function SurveyPage(props: Props) {
         <Grid item xs={3}>
           {chart2 && (
             <Chart data={chart2}>
-              <Legend position="bottom" />
+              <Legend />
               <PieSeries valueField="count" argumentField="label" />
               <Title text="Theo đồng chí từ khi áp dụng E-office (văn phòng điện tử) thời lượng từ khi bắt đầu xây dựng đến khi ban hành được một văn bản được rút ngắn bao nhiêu?" />
               <EventTracker />
@@ -131,7 +131,7 @@ export default function SurveyPage(props: Props) {
         <Grid item xs={3}>
           {chart3 && (
             <Chart data={chart3}>
-              <Legend position="bottom" />
+              <Legend />
               <PieSeries valueField="count" argumentField="label" />
               <Title text="Theo đồng chí trong năm 2021 lượng giấy tờ in ấn các đồng chí tiêu thụ giảm đi bao nhiêu?" />
               <EventTracker />
@@ -142,7 +142,7 @@ export default function SurveyPage(props: Props) {
         <Grid item xs={3}>
           {chart4 && (
             <Chart data={chart4}>
-              <Legend position="bottom" />
+              <Legend />
               <PieSeries valueField="count" argumentField="label" />
               <Title text="Theo đồng chí trong thời gian tới cần phát triển, bổ sung các tiện ích nào để phục vụ đắc lực công tác chuyên môn của mình (đại biểu có thể lựa chọn nhiều đáp án)" />
               <EventTracker />
