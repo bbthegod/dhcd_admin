@@ -11,6 +11,7 @@ import SearchBar from 'app/components/SearchBar';
 import DataTable from 'app/components/DataTable';
 import Loading from 'app/components/Loading';
 import Header from 'app/components/Header';
+import { Typography } from '@mui/material';
 
 import { selectUserPage } from './slice/selectors';
 import { actions } from './slice';
@@ -57,6 +58,10 @@ export default function UserPage(props: Props) {
     <>
       <Header setOpen={setOpen} title="Người Dùng" subtitle="Quản lý" />
       <SearchBar search={search} setSearch={setSearch} />
+      <Typography component="h3" variant="h3" style={{ margin: '16px 0' }}>
+        Số người đã điểm danh: {users?.filter(user => user.isCheckin).length}/
+        {users?.filter(user => user.role === 'user').length} đoàn viên
+      </Typography>
       {!loading ? (
         <DataTable
           isLeaderboard={false}

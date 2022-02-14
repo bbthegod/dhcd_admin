@@ -7,6 +7,8 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { actions } from './slice';
 import { selectSurveyPage } from './slice/selectors';
+import Header from 'app/components/Header';
+import classes from './styles.module.css';
 
 import { Paper, Grid } from '@mui/material';
 import { Chart, PieSeries, Title, Legend, Tooltip } from '@devexpress/dx-react-chart-material-ui';
@@ -104,53 +106,58 @@ export default function SurveyPage(props: Props) {
     }
   }, [users]);
   return (
-    <Paper>
-      <Grid container spacing={2}>
-        <Grid item xs={3}>
-          {chart1 && (
-            <Chart data={chart1}>
-              <Legend />
-              <PieSeries valueField="count" argumentField="label" />
-              <Title text="Đồng chí đã từng rơi vào tình trạng phải lục tìm hết đống hồ sơ, tài liệu nhưng vẫn không tìm thấy một công văn, một tờ trình đã từng thực hiện?" />
-              <EventTracker />
-              <Tooltip />
-            </Chart>
-          )}
-        </Grid>
-        <Grid item xs={3}>
-          {chart2 && (
-            <Chart data={chart2}>
-              <Legend />
-              <PieSeries valueField="count" argumentField="label" />
-              <Title text="Theo đồng chí từ khi áp dụng E-office (văn phòng điện tử) thời lượng từ khi bắt đầu xây dựng đến khi ban hành được một văn bản được rút ngắn bao nhiêu?" />
-              <EventTracker />
-              <Tooltip />
-            </Chart>
-          )}
-        </Grid>
-        <Grid item xs={3}>
-          {chart3 && (
-            <Chart data={chart3}>
-              <Legend />
-              <PieSeries valueField="count" argumentField="label" />
-              <Title text="Theo đồng chí trong năm 2021 lượng giấy tờ in ấn các đồng chí tiêu thụ giảm đi bao nhiêu?" />
-              <EventTracker />
-              <Tooltip />
-            </Chart>
-          )}
-        </Grid>
-        <Grid item xs={3}>
-          {chart4 && (
-            <Chart data={chart4}>
-              <Legend />
-              <PieSeries valueField="count" argumentField="label" />
-              <Title text="Theo đồng chí trong thời gian tới cần phát triển, bổ sung các tiện ích nào để phục vụ đắc lực công tác chuyên môn của mình (đại biểu có thể lựa chọn nhiều đáp án)" />
-              <EventTracker />
-              <Tooltip />
-            </Chart>
-          )}
-        </Grid>
-      </Grid>
-    </Paper>
+    <>
+      <Header title="Thống Kê Khảo Sát" subtitle="" />
+      <div className={classes.table}>
+        <Paper>
+          <Grid container spacing={2}>
+            <Grid item xs={3}>
+              {chart1 && (
+                <Chart data={chart1}>
+                  <Legend />
+                  <PieSeries valueField="count" argumentField="label" />
+                  <Title text="Đồng chí đã từng rơi vào tình trạng phải lục tìm hết đống hồ sơ, tài liệu nhưng vẫn không tìm thấy một công văn, một tờ trình đã từng thực hiện?" />
+                  <EventTracker />
+                  <Tooltip />
+                </Chart>
+              )}
+            </Grid>
+            <Grid item xs={3}>
+              {chart2 && (
+                <Chart data={chart2}>
+                  <Legend />
+                  <PieSeries valueField="count" argumentField="label" />
+                  <Title text="Theo đồng chí từ khi áp dụng E-office (văn phòng điện tử) thời lượng từ khi bắt đầu xây dựng đến khi ban hành được một văn bản được rút ngắn bao nhiêu?" />
+                  <EventTracker />
+                  <Tooltip />
+                </Chart>
+              )}
+            </Grid>
+            <Grid item xs={3}>
+              {chart3 && (
+                <Chart data={chart3}>
+                  <Legend />
+                  <PieSeries valueField="count" argumentField="label" />
+                  <Title text="Theo đồng chí trong năm 2021 lượng giấy tờ in ấn các đồng chí tiêu thụ giảm đi bao nhiêu?" />
+                  <EventTracker />
+                  <Tooltip />
+                </Chart>
+              )}
+            </Grid>
+            <Grid item xs={3}>
+              {chart4 && (
+                <Chart data={chart4}>
+                  <Legend />
+                  <PieSeries valueField="count" argumentField="label" />
+                  <Title text="Theo đồng chí trong thời gian tới cần phát triển, bổ sung các tiện ích nào để phục vụ đắc lực công tác chuyên môn của mình (đại biểu có thể lựa chọn nhiều đáp án)" />
+                  <EventTracker />
+                  <Tooltip />
+                </Chart>
+              )}
+            </Grid>
+          </Grid>
+        </Paper>
+      </div>
+    </>
   );
 }

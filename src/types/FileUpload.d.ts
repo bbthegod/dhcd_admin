@@ -3,4 +3,5 @@ interface FileUpload {
   filename: string;
   url?: string;
   file?: File;
+  allowUser?: boolean;
 }

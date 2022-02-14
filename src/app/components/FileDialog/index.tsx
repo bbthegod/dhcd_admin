@@ -6,7 +6,19 @@
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 
-import { Modal, Card, CardContent, CardActions, Grid, Typography, Button, TextField } from '@mui/material';
+import {
+  Modal,
+  Card,
+  CardContent,
+  CardActions,
+  Grid,
+  Typography,
+  Button,
+  TextField,
+  FormGroup,
+  FormControlLabel,
+  Switch,
+} from '@mui/material';
 import { BASE_URL } from 'constants/config';
 
 import classes from './styles.module.css';
@@ -31,12 +43,14 @@ export default function FileDialog({ open, setOpen, data, handleSubmit }: Props)
         ...{
           filename: values.filename,
           file: values.file,
+          allowUser: values.allowUser,
         },
       });
     } else {
       handleSubmit({
         filename: values.filename,
         file: values.file,
+        allowUser: values.allowUser,
       });
     }
   };
@@ -47,6 +61,7 @@ export default function FileDialog({ open, setOpen, data, handleSubmit }: Props)
         initialValues={{
           filename: data ? data.filename : '',
           name: data ? data.filename : '',
+          allowUser: data ? data.allowUser : true,
           file: null,
         }}
         validationSchema={validationSchema}
@@ -70,6 +85,17 @@ export default function FileDialog({ open, setOpen, data, handleSubmit }: Props)
                       variant="outlined"
                       fullWidth
                     />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <FormGroup>
+                      <FormControlLabel
+                        onChange={() => {
+                          setFieldValue('allowUser', !values.allowUser);
+                        }}
+                        control={<Switch checked={values.allowUser} />}
+                        label="Cho phép đoàn viên xem"
+                      />
+                    </FormGroup>
                   </Grid>
                   <Grid item xs={12}>
                     {data && (

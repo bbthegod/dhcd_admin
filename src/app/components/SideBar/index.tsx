@@ -18,7 +18,7 @@ interface Props {}
 const pages = [
   { title: 'Bảng Xếp Hạng', href: '/leaderboard', icon: <AssessmentIcon /> },
   { title: 'Thống Kê Khảo Sát', href: '/survey', icon: <AssessmentIcon /> },
-  { title: 'Người dùng', href: '/user', icon: <PeopleIcon /> },
+  { title: 'Người Dùng', href: '/user', icon: <PeopleIcon /> },
   { title: 'Câu Hỏi', href: '/question', icon: <HelpIcon /> },
   { title: 'Tài Liệu', href: '/file', icon: <AssignmentIcon /> },
   { title: 'Điều Khiển', href: '/control', icon: <SettingsIcon /> },

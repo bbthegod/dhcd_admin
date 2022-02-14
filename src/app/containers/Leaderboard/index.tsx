@@ -16,7 +16,7 @@ import { actions } from './slice';
 
 interface Props {}
 
-const heading = ['Mã Sinh Viên', 'Tên Sinh Viên', 'Điểm Số'];
+const heading = ['Tên Tài Khoản', 'Tên Người Dùng', 'Điểm Số'];
 const value = ['userID.username', 'userID.fullname', 'totalScore'];
 
 export default function Leaderboard(props: Props) {
@@ -36,9 +36,9 @@ export default function Leaderboard(props: Props) {
   //====================================== Render ======================================
   return !loading ? (
     <>
-      <Header title="Bảng Xếp Hạng" subtitle="Quản lý" />
+      <Header title="Bảng Xếp Hạng" subtitle="" />
       <div className={classes.table}>
-        <DataTable isLeaderboard heading={heading} value={value} data={users} />
+        <DataTable isLeaderboard heading={heading} value={value} data={users.filter(item => item.userID)} />
       </div>
     </>
   ) : (
