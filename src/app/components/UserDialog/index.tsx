@@ -113,7 +113,15 @@ export default function UserDialog({ open, setOpen, data, handleSubmit }: Props)
                     </Field>
                   </Grid>
                   <Grid item md={12} xs={12}>
-                    <Field as={TextField} name="password" label="Mật khẩu" variant="outlined" fullWidth disabled />
+                    <Field
+                      as={TextField}
+                      error={!!errors.password && !!touched.password}
+                      helperText={errors.password}
+                      name="password"
+                      label="Mật khẩu"
+                      variant="outlined"
+                      fullWidth
+                    />
                   </Grid>
                 </Grid>
               </CardContent>
