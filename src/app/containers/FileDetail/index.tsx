@@ -25,7 +25,7 @@ import { actions } from './slice';
 interface Props {}
 
 const heading = ['Tên tài liệu', 'URL', 'Cho phép đoàn viên xem'];
-const value = ['filename', 'url', 'allowUser'];
+const value = ['filename', 'url', 'allowDelegate'];
 
 export default function FileDetail(props: Props) {
   //====================================== Hook ======================================

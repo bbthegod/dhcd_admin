@@ -43,14 +43,14 @@ export default function FileDialog({ open, setOpen, data, handleSubmit }: Props)
         ...{
           filename: values.filename,
           file: values.file,
-          allowUser: values.allowUser,
+          allowDelegate: values.allowDelegate,
         },
       });
     } else {
       handleSubmit({
         filename: values.filename,
         file: values.file,
-        allowUser: values.allowUser,
+        allowDelegate: values.allowDelegate,
       });
     }
   };
@@ -61,7 +61,7 @@ export default function FileDialog({ open, setOpen, data, handleSubmit }: Props)
         initialValues={{
           filename: data ? data.filename : '',
           name: data ? data.filename : '',
-          allowUser: data ? data.allowUser : true,
+          allowDelegate: data ? data.allowDelegate : true,
           file: null,
         }}
         validationSchema={validationSchema}
@@ -90,9 +90,9 @@ export default function FileDialog({ open, setOpen, data, handleSubmit }: Props)
                     <FormGroup>
                       <FormControlLabel
                         onChange={() => {
-                          setFieldValue('allowUser', !values.allowUser);
+                          setFieldValue('allowDelegate', !values.allowDelegate);
                         }}
-                        control={<Switch checked={values.allowUser} />}
+                        control={<Switch checked={values.allowDelegate} />}
                         label="Cho phép đoàn viên xem"
                       />
                     </FormGroup>
