@@ -27,10 +27,6 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required('Trường này không được để trống !'),
 });
 
-const getRndInteger = (min, max) => {
-  return Math.floor(Math.random() * (max - min)) + min;
-};
-
 export default function UserDialog({ open, setOpen, data, handleSubmit }: Props) {
   //====================================== Callback ======================================
   const onSubmit = async (values, actions) => {
@@ -62,7 +58,7 @@ export default function UserDialog({ open, setOpen, data, handleSubmit }: Props)
           username: data ? data.username : '',
           fullname: data ? data.fullname : '',
           role: data ? data.role : '',
-          password: data ? data.password : `${getRndInteger(100000, 999999)}`,
+          password: data ? data.password : '',
         }}
         validationSchema={validationSchema}
         onSubmit={onSubmit}
